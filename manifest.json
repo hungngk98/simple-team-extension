@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Phishing Link Detector",
+    "version": "1.0.0",
+    "permissions": ["scripting", "activeTab", "contextMenus"],
+    "content_scripts": [
+        {
+            "js": ["script.js"],
+            "matches": ["https://*/*", "http://*/*"]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup/index.html"
+    }
+}
